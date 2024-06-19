@@ -1,0 +1,215 @@
+.App{
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.App > header{
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  justify-content:space-around;
+  align-items: center;
+  height: 70px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.208);
+  gap: 20%;
+  z-index: 2;
+}
+
+.App > header > div{
+  flex: 1;
+  height: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+.App > header > div > div{
+  height: 30px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  gap: 3px;
+}
+
+.App > header > div > div > div{
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.App > header > div > div > .success{
+  background-color: teal;
+}
+
+.App > header > div > div > .danger{
+  background-color: darkred;
+}
+
+.App > header > div > div > p{
+  font-size: 12px;
+}
+
+.App > header > button{
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  color: teal;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  cursor: pointer;
+  transition: all 350ms ease;
+}
+.App > header > button:hover{
+  opacity: 0.8;
+}
+
+.App > main{
+  margin: 100px auto 30px auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.App > main > .widget{
+  height: 200px;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.208);
+}
+
+.App > main > div > .toggle {
+  background-color: #ddd;
+  width: 90px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.App > main > div > .toggle > label {
+  width: 40px;
+  height: 40px;
+  background-color: #aaa;
+  display: flex;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  transition: all 350ms ease;
+  z-index: 1;
+}
+.App > main > div > .toggle > label:hover {
+  background-color: #888;
+}
+
+.App > main > div > .toggle > input {
+  display: none;
+}
+
+.App > main > div > .toggle > input:checked + label {
+  margin-left: 50px;
+  background-color: teal;
+}
+
+.App > main > div > .toggle:before, .App > main > div > .toggle:after {
+  content: "ON";
+  position: absolute;
+  margin-left: -45px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 0;
+  color: teal;
+}
+
+.App > main > div > .toggle:after {
+  content: "OFF";
+  margin-top: -40px;
+  margin-left: 5px;
+  color: #888;
+}
+
+.App > main > .widget > h1{
+  color: teal;
+  font-size: 50px;
+  font-weight: 600;
+  overflow: hidden;
+  margin: 0;
+}
+
+.App > main > .widget > .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App > main > .widget > .row > input{
+  border: none;
+  font-size: 24px;
+  font-weight: 600;
+  width: 100px;
+  height: 50px;
+  padding: 0 0 0 20px;
+  border-radius: 50px 0 0 50px;
+  font-family:'Courier New', Courier, monospace;
+  background-color: #ddd;
+  transition: all 350ms ease;
+  color: #aaa;
+  outline: none;
+}
+.App > main > .widget > .row > input:hover{
+  color: #888;
+}
+.App > main > .widget > .row > input:focus{
+  color: #888;
+}
+.App > main > .widget > .row > input::-webkit-outer-spin-button,
+.App > main > .widget > .row > input::-webkit-inner-spin-button {
+  height: 50px;
+}
+
+.btn{
+  height: 50px;
+  width: 50%;
+  border-radius: 50px;
+  border: none;
+  font-family:'Courier New', Courier, monospace;
+  cursor: pointer;
+  color: #888;
+  transition: all 350ms ease;
+}
+.btn:hover{
+  background-color: teal;
+  color: #fff;
+}
+
+.App > main > .widget > .row > button{
+  width: 50px;
+  border-radius: 0 50px 50px 0;
+}
+
+@media only screen and (max-width: 960px){
+  .App > header{
+    gap: 10%;
+  }
+
+  .App > main > .widget > h1{
+    font-size: 40px;
+  }
+}
