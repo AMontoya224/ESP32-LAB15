@@ -7,7 +7,7 @@ const App = () => {
   const [potValue, setPotValue] = useState(0);
   const [led1, setLed1] = useState(false);
   const [led2, setLed2] = useState(false);
-  const SERVER_IP = 'http://192.168.1.43:8000';
+  const SERVER_IP = 'http://IP';
 
   useEffect(() => {
     const fetchPotentiometer = async () => {
